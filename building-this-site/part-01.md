@@ -6,11 +6,11 @@ The technologies I've used for this project are: [Hugo](https://gohugo.io/), [Gi
 
 # Hugo
 
-Hugo is a static-site generator written in Go. Don't worry if you don't know the Go language, it's really not that important when working with Hugo. All we will use that is related to Go is it's `html/template` library which allows us to build our templates.
+Hugo is a static-site generator written in Go. Don't worry if you don't know the Go language, it's really not that important when working with Hugo. All we will use that is related to Go is its `html/template` library which allows us to build our templates.
 
 # Gitlab
 
-Gitlab is very similar to Github, however it provides built in Continiuous Integration/Continiuous Deployment, with Gitlab Runner. It's completely free when building this project as we stay well within Gitlab's free limits. Their free tier is very generous so you will be able to build other projects with your free account as well.
+Gitlab is very similar to Github, however it provides built in Continuous Integration/Continuous Deployment, with Gitlab Runner. It's completely free when building this project as we stay well within Gitlab's free limits. Their free tier is very generous so you will be able to build other projects with your free account as well.
 
 # Firebase
 
