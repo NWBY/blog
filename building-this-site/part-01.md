@@ -1,10 +1,3 @@
----
-title: "Building this site - I"
-description: "First post in this series about how I built this site and what tech I used."
-date: 2019-01-11T16:54:36Z
-draft: false
----
-
 So I'll start of by saying that this site took a lot longer than it needed to. It was simply me being lazy that made it take so long.
 
 Building a site similar is very simple and can be deployed in a few hours, all that may take a bit longer is your customisation and styling. This post will only contain a brief overview of the technologies I used to build this project. Part II will start the build process.
@@ -28,5 +21,3 @@ Firebase is actually designed for app building and deployment, however they prov
 Route 53 from Amazon Web Services is a cloud based Domain Name System (DNS). It allows us to manage the Nameservers for our site with ease, it's very fast and cheap.
 
 Thats all for the first post in this tutorial series. In the next part of this series I will move onto building the site.
-
-Check out the next post below. You can also find all the posts on this site in this [repo on my GitHub profile](https://github.com/NWBY/blog).
