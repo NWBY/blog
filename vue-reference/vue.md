@@ -22,6 +22,8 @@ new Vue({
 })
 ```
 
+# Props
+
 Props can either be an array of strings: `['This', 'is', 'props']` or they can be an object with prop name and data type: `{ title: String, age: Number }`.
 
 Passing props:
@@ -43,3 +45,30 @@ When using props in Laravel need to use props method inside a Vue component (e.g
 ```
 
 Then inside the blade file use title component: `<project-title :title="{{ json_encode($projects) }}"></project-title>`. The \$projects variable is passed from the controller. `:title` needs to match value in the props method.
+This can be done the same when consuming an API then passing the data from the API into the child component.
+
+Consume an API in Vue file:
+
+```
+<script>
+    import axios from 'axios';
+
+    export default {
+        data() {
+            return {
+                info: [],
+                errors: []
+            }
+        },
+        mounted() {
+            axios.get('URL').then(response => {
+                this.info = response.data
+            }).catch(error => {
+                this.errors.push(error)
+            })
+        }
+    }
+</script>
+```
+
+Then can loop through info array and display the data.
