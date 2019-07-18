@@ -47,10 +47,19 @@ When using props in Laravel need to use props method inside a Vue component (e.g
 Then inside the blade file use title component: `<project-title :title="{{ json_encode($projects) }}"></project-title>`. The \$projects variable is passed from the controller. `:title` needs to match value in the props method.
 This can be done the same when consuming an API then passing the data from the API into the child component.
 
-Consume an API in Vue file:
+Consume an API in Vue component file and pass data to child component:
+
+1. Must require the child component and register it.
+2. Use child component in template tags, and pass the data stored in info[] to its props.
+3. Then register parent component with the Vue instance and then can be used inside laravel blade template.
 
 ```
+<template>
+    <child-component :props="info"></child-component>
+</template>
+
 <script>
+    import ChildComponent from './ChildComponent.vue';
     import axios from 'axios';
 
     export default {
@@ -59,6 +68,9 @@ Consume an API in Vue file:
                 info: [],
                 errors: []
             }
+        },
+        components: {
+            "child-component": ChildComponent
         },
         mounted() {
             axios.get('URL').then(response => {
