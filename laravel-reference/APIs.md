@@ -21,13 +21,17 @@ Route::get('api/user', 'APIController@index');
 
 # Resource Collections
 
-In toArray() method: `'data' => $this->collection,`. Then in the controller to return a collection of models (similar to a single resource):
+Same as a resource but requires:
 
 ```
-use App\Http\Resources\UserCollection;
+use App\Http\Resources\User as UserResource;
 
 public function index() {
     // pass data to the resource collection that needs to be returned.
-    return new UserCollection(User::all());
+    return new UserResource::collection(User::all());
 }
 ```
+
+This approach doesn't include any metadata.
+
+Can then call this API in a Vue component or instance using axios and pass it down to child components.
