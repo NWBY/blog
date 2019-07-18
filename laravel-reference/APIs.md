@@ -28,7 +28,7 @@ use App\Http\Resources\User as UserResource;
 
 public function index() {
     // pass data to the resource collection that needs to be returned.
-    return new UserResource::collection(User::all());
+    return UserResource::collection(User::all());
 }
 ```
 
